@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIT - Fórum de Inovação Tecnologia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Montserrat', sans-serif; }
+  </style>
+</head>
+<body class="bg-[#00BBFF] text-white min-h-screen flex flex-col justify-center items-center text-center p-6">
+
+  <!-- Logo e nome do evento -->
+  <div class="mb-6">
+    <img src="assets/img/logo-fit-branca-2025.png" alt="Logo FIT" class="mx-auto mb-4 w-32 h-32 sm:w-40 sm:h-40">
+    <h1 class="text-3xl md:text-5xl font-bold">FIT - Fórum de Inovação Tecnologia</h1>
+    <p class="mt-2 text-lg md:text-2xl">A era do IOT: Saúde e Agricultura</p>
+    <p class="mt-1 text-md md:text-lg font-medium">Data: <span class="font-bold">21 e 22 de Novembro de 2025</span></p>
+  </div>
+
+  <!-- Realização -->
+  <div class="mb-10">
+    <p class="text-base md:text-lg mb-3">Realização:</p>
+    <div class="flex flex-col sm:flex-row justify-center gap-6">
+      <div class="bg-white rounded-xl shadow-md p-4 flex items-center justify-center w-40 h-25">
+        <img src="assets/img/ufc.png" alt="UFC" class="max-h-15">
+      </div>
+      <div class="bg-white rounded-xl shadow-md p-4 flex items-center justify-center w-40 h-25">
+        <img src="assets/img/sebrae.png" alt="SEBRAE" class="max-h-15">
+      </div>
+    </div>
+  </div>
+
+  <!-- Contador -->
+  <div class="mb-8">
+    <h2 class="text-xl md:text-2xl font-semibold mb-4">O maior evento universitário de tecnologia do Sertão de Crateús está chegando!</h2>
+    <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+      <div class="bg-white text-[#363d6a] rounded-xl shadow-lg p-4">
+        <span id="days" class="text-2xl md:text-3xl font-bold">00</span>
+        <p>Dias</p>
+      </div>
+      <div class="bg-white text-[#363d6a] rounded-xl shadow-lg p-4">
+        <span id="hours" class="text-2xl md:text-3xl font-bold">00</span>
+        <p>Horas</p>
+      </div>
+      <div class="bg-white text-[#363d6a] rounded-xl shadow-lg p-4">
+        <span id="minutes" class="text-2xl md:text-3xl font-bold">00</span>
+        <p>Min</p>
+      </div>
+      <div class="bg-white text-[#363d6a] rounded-xl shadow-lg p-4">
+        <span id="seconds" class="text-2xl md:text-3xl font-bold">00</span>
+        <p>Seg</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botões -->
+  <div class="flex flex-col sm:flex-row gap-4">
+    <a href="https://fit.crateus.ufc.br/jogos.html" target="_blank" class="bg-[#FFA800] text-[#363d6a] font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-[#ff8c00] transition">
+      Arena FIT Games
+    </a>
+    <a href="https://fit.crateus.ufc.br/enigma.html" target="_blank" class="bg-[#A900FF] text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-[#8000cc] transition">
+      Enigma (em breve)
+    </a>
+    <a href="https://fit.crateus.ufc.br/robotica.html" target="_blank" class="bg-[#00FF7F] text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-[#00BF5F] transition">
+      Robotica (em breve)
+    </a>
+  </div>
+
+  <!-- Script do contador -->
+  <script>
+    // Evento começa dia 21 de novembro de 2025 às 09h00
+    const eventDate = new Date("Oct 21, 2025 07:00:00").getTime();
+
+    const countdown = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      if (distance < 0) {
+        clearInterval(countdown);
+        document.getElementById("countdown").innerHTML = "<p class='text-xl font-bold'>O evento já começou!</p>";
+        return;
+      }
+
+      document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+      document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
+    }, 1000);
+  </script>
+</body>
+</html>
