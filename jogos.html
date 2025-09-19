@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Icon-->
+    <link rel="icon" href="assets/img/logo-fit-branca-2025.png" type="image/png">
+    <title>FIT Games - Transmissão e Inscrições</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Jogos CSS -->
+    <link rel="stylesheet" href="css/jogos.css">
+</head>
+<body class="bg-custom-dark">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-custom-darker py-4 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-custom-blue gamer-font">FIT <span class="text-white">GAMES</span></h1>
+                    </div>
+                    <div class="hidden md:ml-10 md:flex md:space-x-8">
+                        <a href="#home" class="text-white nav-link">INICIO</a>
+                        <a href="#stream" class="text-gray-400 hover:text-white nav-link">TRANSMISSÃO</a>
+                        <a href="#games" class="text-gray-400 hover:text-white nav-link">JOGOS</a>
+                        <a href="#register" class="text-gray-400 hover:text-white nav-link">INSCRIÇÕES</a>
+                        <a href="#schedule" class="text-gray-400 hover:text-white nav-link">CRONOGRAMA</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#stream" class="text-red-500 hover:text-red-400">
+                        <i class="fab fa-youtube text-xl"></i> YouTube
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-28 pb-20 bg-gradient-to-br from-custom-dark to-custom-darker">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-8">
+                <i class="fas fa-gamepad text-5xl text-custom-blue"></i>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 gamer-font">ARENA FIT GAMES</h2>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-300">A maior competição de games do Fórum de Tecnologia e Inovação. Participe ou assista às transmissões!</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+                <a href="#register" class="bg-custom-green text-gray-900 px-8 py-3 rounded-md gamer-font text-lg btn">
+                    <i class="fas fa-trophy mr-2"></i>INSCREVER-SE
+                </a>
+                <a href="#register" class="bg-transparent border border-custom-blue text-white px-8 py-3 rounded-md gamer-font text-lg btn">
+                    <i class="fa-solid fa-file"></i> FORMULÁRIO DE INSCRIÇÃO
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Stream Section -->
+    <section id="stream" class="py-16 bg-custom-darker">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-center mb-8">
+                <span class="live-badge bg-red-600 text-white px-4 py-1 rounded-full gamer-font mr-3">AO VIVO</span>
+                <h2 class="text-3xl font-bold text-center gamer-font section-title">TRANSMISSÃO OFICIAL</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2">
+                    <div id="video-container" class="stream-container bg-black h-80 lg:h-96">
+                        <div class="stream-placeholder">
+                            <div class="text-center">
+                                <i class="fas fa-video text-4xl text-gray-500 mb-4"></i>
+                                <p class="text-gray-400">Transmissão ao vivo</p>
+                                <div class="mt-4 flex justify-center space-x-4">
+                                    <button id="play-video-btn" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded flex items-center">
+                                        <i class="fab fa-youtube mr-2"></i> YouTube
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+               <div class="bg-gray-800 rounded-xl p-6">
+                            <h3 class="text-xl gamer-font mb-4 border-b border-gray-700 pb-2">PARTIDAS FUTURAS</h3>
+                            <div class="space-y-4">
+                            <!-- Alterar informação do campo data-video-id para da partida do campeonato-->
+                             <a href="#" class="load-video-btn text-red-600 hover:text-red-500" data-video-id="y-gpk5boGc8" title="Assistir no YouTube">
+                                <div class="bg-gray-900 p-3 rounded-lg">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="text-sm text-gray-400">16:00</span>
+                                        <div class="flex items-center space-x-2">
+                                            <span class="text-custom-green text-sm gamer-font">EM BREVE</span>
+                                                <i class="fab fa-youtube"></i>
+                                    
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span>Dragões VS Falcons</span>
+                                        <span class="text-custom-purple gamer-font">LOL</span>
+                                    </div>
+                                </div>
+                                </a>
+                                
+                                <!-- Alterar informação do campo data-video-id para da partida do campeonato-->
+                                <div class="bg-gray-900 p-3 rounded-lg ">
+                                    <a href="#" class="load-video-btn text-red-600 hover:text-red-500" data-video-id="y-gpk5boGc8" title="Assistir no YouTube">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="text-sm text-gray-400">18:30</span>
+                                        <div class="flex items-center space-x-2">
+                                            <span class="text-custom-orange text-sm gamer-font">EM BREVE</span>
+                                                <i class="fab fa-youtube"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span>Thunder VS Lightning</span>
+                                        <span class="text-custom-blue gamer-font">CS:GO</span>
+                                    </div>
+                                </div>
+                                </a>
+                                <!-- Alterar informação do campo data-video-id para da partida do campeonato-->
+                                <div class="bg-gray-900 p-3 rounded-lg">
+                                    <a href="#" class="load-video-btn text-red-600 hover:text-red-500" data-video-id="VIDEO_ID_DO_VALORANT" title="Assistir no YouTube">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="text-sm text-gray-400">20:00</span>
+                                        <div class="flex items-center space-x-2">
+                                            <span class="text-gray-400 text-sm gamer-font">AMANHÃ</span>
+                                                <i class="fab fa-youtube"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span>Final - Valorant</span>
+                                        <span class="text-custom-purple gamer-font">VAL</span>
+                                    </div>
+                                </div>
+                                </a>
+                                <!-- Alterar informação do campo data-video-id para da partida do campeonato-->
+                                <div class="bg-gray-900 p-3 rounded-lg">
+                                    <a href="#" class="load-video-btn text-red-600 hover:text-red-500" data-video-id="VIDEO_ID_DO_VALORANT" title="Assistir no YouTube">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="text-sm text-gray-400">20:00</span>
+                                        <div class="flex items-center space-x-2">
+                                            <span class="text-gray-400 text-sm gamer-font">AMANHÃ</span>
+                                                <i class="fab fa-youtube"></i> Assita ao vivo 
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span>Final - Valorant</span>
+                                        <span class="text-custom-purple gamer-font">VAL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+
+                    <h3 class="text-xl gamer-font mb-4 mt-8 border-b border-gray-700 pb-2">CHAT AO VIVO</h3>
+                    <div class="bg-gray-900 rounded-lg p-3 h-40 overflow-y-auto">
+                        <div class="text-center text-gray-500 py-8">
+                            <i class="fab fa-twitch text-2xl mb-2"></i>
+                            <p>Conecte-se ao chat do YouTube</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="py-16 bg-custom-dark">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4 gamer-font section-title">INSCRIÇÕES</h2>
+            
+            <div class="bg-gray-800 rounded-xl p-6 mb-8 border border-gray-700">
+                <div class="flex items-center">
+                    <div class="bg-custom-purple rounded-full p-3 mr-4">
+                        <i class="fas fa-exclamation-circle text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl gamer-font">Período de Inscrições</h3>
+                        <p class="text-gray-300">Inscrições abertas até <span class="text-custom-green">18 de Outubro de 2025 ás 23:59</span></p>
+                    </div>
+                </div>
+                
+                <div class="mt-6 bg-gray-900 rounded-lg p-4">
+                    <div class="flex justify-between items-center mb-4">
+                        <h4 class="gamer-font">Tempo restante para inscrições:</h4>
+                        <div class="flex space-x-2">
+                            <div class="countdown-box text-center">
+                                <div class="text-2xl gamer-font" id="days">15</div>
+                                <div class="text-xs text-gray-400">dias</div>
+                            </div>
+                            <div class="countdown-box text-center">
+                                <div class="text-2xl gamer-font" id="hours">08</div>
+                                <div class="text-xs text-gray-400">horas</div>
+                            </div>
+                            <div class="countdown-box text-center">
+                                <div class="text-2xl gamer-font" id="minutes">42</div>
+                                <div class="text-xs text-gray-400">min</div>
+                            </div>
+                            <div class="countdown-box text-center">
+                                <div class="text-2xl gamer-font" id="seconds">19</div>
+                                <div class="text-xs text-gray-400">seg</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-800 rounded-xl p-8 border border-gray-700">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl gamer-font mb-2">Formulário de Inscrição</h3>
+                    <p class="text-gray-300">Preencha o formulário abaixo para participar dos torneios</p>
+                </div>
+                
+                <!-- Google Forms Embed -->
+                <div class="bg-gray-900 rounded-lg p-4 mb-6">
+                    <div class="flex items-center mb-4">
+                        <i class="fab fa-google text-custom-green text-xl mr-2"></i>
+                        <h4 class="gamer-font">Formulário Google</h4>
+                    </div>
+                    <div class="bg-white p-1 rounded">
+                        <div style="height: 500px; background-color: #f9f9f9; display: flex; align-items: center; justify-content: center; color: #333;">
+                            <div class="text-center">
+                                <i class="fab fa-google-drive text-4xl mb-2"></i>
+                                <p>Formulário de Inscrição Google</p>
+                                <p class="text-sm mt-2">Clique no botão abaixo para acessar</p>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLScnetizqHmUx4dNMwyYksF-NOMeeyxHL8g8Vm-_q4TYIBqe9A/viewform?usp=sharing&ouid=111320232817091102401" class="inline-block mt-4 bg-custom-blue text-white px-4 py-2 rounded gamer-font">
+                                    Abrir Formulário Campeonato de LOL
+                                </a>
+                            </div>
+                            <div class="text-center">
+                                <i class="fab fa-google-drive text-4xl mb-2"></i>
+                                <p>Formulário de Inscrição Google</p>
+                                <p class="text-sm mt-2">Clique no botão abaixo para acessar</p>
+                                <a href="#" class="inline-block mt-4 bg-custom-blue text-white px-4 py-2 rounded gamer-font">
+                                    Abrir Formulário Campeonato de CS:GO 2
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="gamer-font text-lg mb-4">Informações Importantes</h4>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-custom-green mt-1 mr-2"></i>
+                                <span>Inscrições gratuitas para todos os jogos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-custom-green mt-1 mr-2"></i>
+                                <span>Cada jogador pode se inscrever em até 2 modalidades</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-custom-green mt-1 mr-2"></i>
+                                <span>Equipes devem ter entre 3-5 jogadores dependendo do jogo</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-custom-green mt-1 mr-2"></i>
+                                <span>Leia o regulamento completo antes de se inscrever</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="gamer-font text-lg mb-4">Dúvidas Frequentes</h4>
+                        <div class="space-y-3">
+                            <div class="bg-gray-900 p-3 rounded-lg">
+                                <h5 class="font-medium">Preciso pagar para participar?</h5>
+                                <p class="text-sm text-gray-400">Não, todas as inscrições são gratuitas.</p>
+                            </div>
+                            <div class="bg-gray-900 p-3 rounded-lg">
+                                <h5 class="font-medium">Posso participar de mais de um jogo?</h5>
+                                <p class="text-sm text-gray-400">Sim, cada jogador pode participar de até 2 modalidades.</p>
+                            </div>
+                            <div class="bg-gray-900 p-3 rounded-lg">
+                                <h5 class="font-medium">Onde ocorrerão as competições?</h5>
+                                <p class="text-sm text-gray-400">No campus da FIT e online para algumas modalidades.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Sections -->
+    <section id="games" class="py-16 bg-custom-darker">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4 gamer-font section-title">JOGOS EM DESTAQUE</h2>
+            <p class="text-center text-gray-400 mb-12">Escolha seu game e participe da competição</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card CS:GO -->
+                <div class="game-card bg-gray-800 rounded-xl overflow-hidden p-6 text-center border-t-4 border-custom-orange">
+                    <div class="mb-5">
+                        <i class="fas fa-gun text-4xl text-custom-orange"></i>
+                    </div>
+                    <h3 class="text-xl font-bold gamer-font mb-3">CS:GO</h3>
+                    <p class="text-gray-300 mb-4">Batalha estratégica entre terroristas e contra-terroristas</p>
+                    <div class="flex justify-between items-center mb-6 text-sm">
+                        <span class="text-custom-orange"><i class="fas fa-users mr-2"></i>5x5</span>
+                        <span class="text-custom-orange"><i class="fas fa-trophy mr-2"></i>R$ 850,00</span>
+                    </div>
+                    <button class="w-full bg-custom-orange text-white py-2 rounded gamer-font btn">
+                        INSCREVER-SE <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+                
+                <!-- Card League of Legends -->
+                <div class="game-card bg-gray-800 rounded-xl overflow-hidden p-6 text-center border-t-4 border-custom-blue">
+                    <div class="mb-5">
+                        <i class="fas fa-dragon text-4xl text-custom-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold gamer-font mb-3">LEAGUE OF LEGENDS</h3>
+                    <p class="text-gray-300 mb-4">Batalha épica no modo Summoner's Rift</p>
+                    <div class="flex justify-between items-center mb-6 text-sm">
+                        <span class="text-custom-blue"><i class="fas fa-users mr-2"></i>5x5</span>
+                        <span class="text-custom-blue"><i class="fas fa-trophy mr-2"></i>R$ 850,00</span>
+                    </div>
+                    <button class="w-full bg-custom-blue text-white py-2 rounded gamer-font btn">
+                        INSCREVER-SE <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center text-custom-green gamer-font">
+                    Ver todos os jogos disponíveis
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="py-16 bg-custom-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4 gamer-font section-title">CRONOGRAMA DO EVENTO</h2>
+            <p class="text-center text-gray-400 mb-12">Fique por dentro de todas as etapas da competição</p>
+            
+            <div class="bg-gray-800 rounded-xl p-6 border border-gray-700">
+                <div class="flex overflow-x-auto pb-2 mb-6">
+                    <button class="tab-button flex-shrink-0 bg-gray-900 text-white px-4 py-2 rounded-md mr-2 gamer-font active">Dia 1</button>
+                    <button class="tab-button flex-shrink-0 bg-gray-700 text-gray-300 px-4 py-2 rounded-md mr-2 gamer-font">Dia 2</button>
+                    <button class="tab-button flex-shrink-0 bg-gray-700 text-gray-300 px-4 py-2 rounded-md mr-2 gamer-font">Dia 3</button>
+                    <button class="tab-button flex-shrink-0 bg-gray-700 text-gray-300 px-4 py-2 rounded-md gamer-font">Finais</button>
+                </div>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-gray-700">
+                                <th class="py-3 text-left text-custom-blue gamer-font">Horário</th>
+                                <th class="py-3 text-left text-custom-blue gamer-font">Jogo</th>
+                                <th class="py-3 text-left text-custom-blue gamer-font">Etapa</th>
+                                <th class="py-3 text-left text-custom-blue gamer-font">Transmissão</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-700">
+                                <td class="py-4">10:45 - 12:15</td>
+                                <td class="py-4">League of Legends</td>
+                                <td class="py-4">Quartas de Final</td>
+                                <td class="py-4">
+                                    <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded">Twitch</span>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-700">
+                                <td class="py-4">14:00 - 15:30</td>
+                                <td class="py-4">CS:GO</td>
+                                <td class="py-4">Semi-Final</td>
+                                <td class="py-4">
+                                    <span class="bg-red-500 text-white text-xs px-2 py-1 rounded">YouTube</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#" class="inline-flex items-center text-white bg-custom-blue px-6 py-3 rounded-lg gamer-font btn">
+                    <i class="far fa-calendar-alt mr-2"></i>
+                    Adicionar à minha agenda
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-custom-darker py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h2 class="text-xl font-bold gamer-font text-custom-blue mb-4">FIT GAMES</h2>
+                    <p class="text-gray-400">A maior competição de games do Fórum de Tecnologia e Inovação.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg gamer-font mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#stream" class="text-gray-400 hover:text-white">Transmissão</a></li>
+                        <li><a href="#register" class="text-gray-400 hover:text-white">Inscrições</a></li>
+                        <li><a href="#schedule" class="text-gray-400 hover:text-white">Cronograma</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Regulamento</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg gamer-font mb-4">Contato</h3>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400"><i class="fas fa-envelope mr-2"></i> fit@tecnologia.com</li>
+                        <li class="text-gray-400"><i class="fas fa-phone mr-2"></i> (11) 9999-9999</li>
+                        <li class="text-gray-400"><i class="fas fa-map-marker-alt mr-2"></i> Crateús, Ce</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg gamer-font mb-4">Siga-nos</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-red-500"><i class="fab fa-youtube text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-purple-500"><i class="fab fa-twitch text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-pink-500"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <p class="text-sm text-gray-500"> 2025 FIT Games. Todos os direitos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Countdown timer
+        function updateCountdown() {
+            const targetDate = new Date('November 25, 2025 23:59:59').getTime();
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+            
+            if (distance < 0) {
+                document.getElementById('days').innerText = '0';
+                document.getElementById('hours').innerText = '0';
+                document.getElementById('minutes').innerText = '0';
+                document.getElementById('seconds').innerText = '0';
+                return;
+            }
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').innerText = days;
+            document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Tab switching
+        const tabButtons = document.querySelectorAll('.tab-button');
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+    <script src="js/modalJogos.js"></script>
+</body>
+</html>

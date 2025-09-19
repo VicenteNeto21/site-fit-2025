@@ -1,0 +1,157 @@
+  /* Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+  /* Custom Colors and Styles */
+  :root {
+            --blue: #00BBFF;
+            --green: #00FF7F;
+            --purple: #A900FF;
+            --orange: #FFA800;
+            --dark: #0F172A;
+            --darker: #0A0E1A;
+        }
+        
+        body {
+            font-family: 'Exo', sans-serif;
+            background-color: var(--dark);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .gamer-font {
+            font-family: 'Oxanium', sans-serif;
+            font-weight: 700;
+        }
+        
+        .bg-custom-blue { background-color: var(--blue); }
+        .bg-custom-green { background-color: var(--green); }
+        .bg-custom-purple { background-color: var(--purple); }
+        .bg-custom-orange { background-color: var(--orange); }
+        .bg-custom-dark { background-color: var(--dark); }
+        .bg-custom-darker { background-color: var(--darker); }
+        
+        .text-custom-blue { color: var(--blue); }
+        .text-custom-green { color: var(--green); }
+        .text-custom-purple { color: var(--purple); }
+        .text-custom-orange { color: var(--orange); }
+        
+        .border-custom-blue { border-color: var(--blue); }
+        .border-custom-green { border-color: var(--green); }
+        .border-custom-purple { border-color: var(--purple); }
+        .border-custom-orange { border-color: var(--orange); }
+        
+        .game-card {
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--blue);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .btn {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--blue), var(--purple));
+            bottom: -10px;
+            left: 20%;
+            border-radius: 3px;
+        }
+        
+        .carousel-item {
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        input, select, textarea {
+            background-color: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            color: white !important;
+            border-radius: 8px !important;
+            padding: 12px 16px !important;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--blue) !important;
+            box-shadow: 0 0 0 2px rgba(0, 187, 255, 0.2) !important;
+        }
+        
+        .countdown-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            padding: 10px;
+            min-width: 60px;
+        }
+        
+        .live-badge {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+        
+        .stream-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        
+        .stream-placeholder {
+            background: linear-gradient(45deg, #0f0f2d, #1a1a3a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        
+        .tab-button {
+            transition: all 0.3s ease;
+        }
+        
+        .tab-button.active {
+            background: linear-gradient(90deg, var(--blue), var(--purple));
+            color: white;
+        }
