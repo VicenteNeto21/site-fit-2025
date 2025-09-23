@@ -73,25 +73,33 @@
   </div>
 
   <!-- Script do contador -->
-  <script>
-    // Evento começa dia 21 de novembro de 2025 às 09h00
-    const eventDate = new Date("Oct 21, 2025 07:00:00").getTime();
+<script>
+  // A data do evento no seu código original estava "Oct 21", mas no comentário "21 de novembro".
+  // Ajustei para 21 de Novembro para corresponder ao comentário.
+  const eventDate = new Date("Oct 21, 2025 09:00:00").getTime();
 
-    const countdown = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = eventDate - now;
+  const countdown = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
 
-      if (distance < 0) {
-        clearInterval(countdown);
-        document.getElementById("countdown").innerHTML = "<p class='text-xl font-bold'>O evento já começou!</p>";
-        return;
-      }
+    if (distance < 0) {
+      clearInterval(countdown);
+      document.getElementById("countdown").innerHTML = "<p class='text-xl font-bold'>O evento já começou!</p>";
+      return;
+    }
 
-      document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-      document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
-    }, 1000);
-  </script>
+    // Calcula os valores de tempo
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Adiciona o zero à esquerda se o número for menor que 10
+    document.getElementById("days").innerText = String(days).padStart(2, '0');
+    document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+    document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+    document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+  }, 1000);
+</script>
 </body>
 </html>
