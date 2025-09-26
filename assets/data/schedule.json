@@ -1,0 +1,63 @@
+[
+    {
+        "id": "day1",
+        "date": "2025-10-24",
+        "events": [
+            {
+                "title": "Cerimônia de Abertura",
+                "time": "08:00 - 09:30",
+                "location": "Auditório Principal",
+                "speaker": "Dra. Ana Silva",
+                "type": "Cerimônia"
+            },
+            {
+                "title": "IoT na Indústria 4.0",
+                "time": "10:00 - 12:00",
+                "location": "Sala 101",
+                "speaker": "Eng. Carlos Mendes",
+                "type": "Palestra"
+            },
+            {
+                "title": "Workshop: Introdução ao Arduino",
+                "time": "14:00 - 17:00",
+                "location": "Laboratório de Hardware",
+                "speaker": "Prof. João Pereira",
+                "type": "Workshop"
+            }
+        ]
+    },
+    {
+        "id": "day2",
+        "date": "2025-10-25",
+        "events": [
+            {
+                "title": "Hackathon de IoT",
+                "time": "09:00 - 18:00",
+                "location": "Laboratório Principal",
+                "speaker": "Equipe Mentores",
+                "type": "Hackathon"
+            },
+            {
+                "title": "Palestra: Cidades Inteligentes",
+                "time": "10:00 - 12:00",
+                "location": "Auditório Principal",
+                "speaker": "Arq. Maria Oliveira",
+                "type": "Palestra"
+            },
+            {
+                "title": "Workshop: MQTT para IoT",
+                "time": "14:00 - 16:00",
+                "location": "Sala 102",
+                "speaker": "Eng. Pedro Souza",
+                "type": "Workshop"
+            },
+            {
+                "title": "Cerimônia de Encerramento",
+                "time": "17:00 - 18:30",
+                "location": "Auditório Principal",
+                "speaker": "Prof. Ana Clara",
+                "type": "Cerimônia"
+            }
+        ]
+    }
+]

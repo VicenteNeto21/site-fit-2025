@@ -1,105 +1,581 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FIT - Fórum de Inovação Tecnologia</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Montserrat', sans-serif; }
-  </style>
-</head>
-<body class="bg-[#00BBFF] text-white min-h-screen flex flex-col justify-center items-center text-center p-6">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FIT 2025 — Internet das Coisas e suas aplicações</title>
+    <link rel="icon" href="assets/img/fit-icon.svg" type="image/svg+xml" />
 
-  <!-- Logo e nome do evento -->
-  <div class="mb-6">
-    <img src="assets/img/logo-fit-branca-2025.png" alt="Logo FIT" class="mx-auto mb-4 w-32 h-32 sm:w-40 sm:h-40">
-    <h1 class="text-3xl md:text-5xl font-bold">FIT - Fórum de Inovação Tecnologia</h1>
-    <p class="mt-2 text-lg md:text-2xl">Tema: <span class="font-bold">Internet das Coisas e suas aplicações</span></p>
-    <p class="mt-1 text-md md:text-lg font-medium">Data: <span class="font-bold">21 e 22 de Novembro de 2025</span></p>
-  </div>
-
-  <!-- Realização -->
-  <div class="mb-10">
-    <p class="text-base md:text-lg mb-3">Realização:</p>
-    <div class="flex flex-col sm:flex-row justify-center gap-6">
-      <div class="bg-white rounded-xl shadow-md p-4 flex items-center justify-center w-40 h-25">
-        <img src="assets/img/ufc.png" alt="UFC" class="max-h-15">
-      </div>
-      <div class="bg-white rounded-xl shadow-md p-4 flex items-center justify-center w-40 h-25">
-        <img src="assets/img/sebrae.png" alt="SEBRAE" class="max-h-15">
-      </div>
-       <div class="bg-white rounded-xl shadow-md p-4 flex items-center justify-center w-40 h-25">
-        <img src="assets/img/logo-oficial-fit.svg" alt="SEBRAE" class="max-h-15">
-      </div>
-    </div>
-  </div>
-
-  <!-- Contador -->
-  <div class="mb-8">
-    <h2 class="text-xl md:text-2xl font-semibold mb-4">O maior evento universitário de tecnologia do Sertão de Crateús está chegando!</h2>
-    <div id="countdown" class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-      <div class="bg-white text-[#363d6a] rounded-xl shadow-lg p-4">
-        <span id="days" class="text-2xl md:text-3xl font-bold">00</span>
-        <p>Dias</p>
-      </div>
-      <div class="bg-white text-[#363d6a] rounded-xl shadow-lg p-4">
-        <span id="hours" class="text-2xl md:text-3xl font-bold">00</span>
-        <p>Horas</p>
-      </div>
-      <div class="bg-white text-[#363d6a] rounded-xl shadow-lg p-4">
-        <span id="minutes" class="text-2xl md:text-3xl font-bold">00</span>
-        <p>Min</p>
-      </div>
-      <div class="bg-white text-[#363d6a] rounded-xl shadow-lg p-4">
-        <span id="seconds" class="text-2xl md:text-3xl font-bold">00</span>
-        <p>Seg</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Botões -->
-  <div class="flex flex-col sm:flex-row gap-4">
-    <a href="https://fit.crateus.ufc.br/jogos.html" target="_blank" class="bg-[#FFA800] text-[#363d6a] font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-[#ff8c00] transition">
-      Arena FIT Games
-    </a>
-    <a href="https://fit.crateus.ufc.br/enigma.html" target="_blank" class="bg-[#A900FF] text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-[#8000cc] transition">
-      Enigma (em breve)
-    </a>
-    <a href="https://fit.crateus.ufc.br/robotica.html" target="_blank" class="bg-[#00FF7F] text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-[#00BF5F] transition">
-      Robotica (em breve)
-    </a>
-  </div>
-
-  <!-- Script do contador -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 <script>
-  // A data do evento no seu código original estava "Oct 21", mas no comentário "21 de novembro".
-  // Ajustei para 21 de Novembro para corresponder ao comentário.
-  const eventDate = new Date("Oct 21, 2025 09:00:00").getTime();
-
-  const countdown = setInterval(() => {
-    const now = new Date().getTime();
-    const distance = eventDate - now;
-
-    if (distance < 0) {
-      clearInterval(countdown);
-      document.getElementById("countdown").innerHTML = "<p class='text-xl font-bold'>O evento já começou!</p>";
-      return;
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          montserrat: ['Montserrat', 'sans-serif'],
+        },
+        colors: {
+          primary: {
+            DEFAULT: '#00AFEF', // Azul principal
+          },
+          success: {
+            DEFAULT: '#00FF7F', // Verde neon
+          },
+          purplebrand: {
+            DEFAULT: '#A900FF', // Roxo
+          },
+          accent: {
+            DEFAULT: '#FFA800', // Laranja
+          }
+        }
+      }
     }
-
-    // Calcula os valores de tempo
-    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // Adiciona o zero à esquerda se o número for menor que 10
-    document.getElementById("days").innerText = String(days).padStart(2, '0');
-    document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-    document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-    document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
-  }, 1000);
+  }
 </script>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="FIT 2025 — Maior evento universitário de tecnologia do Sertão de Crateús. Palestras, workshops e hackathon sobre IoT." />
+    <meta name="keywords"
+        content="FIT 2025, Crateús, IoT, Internet das Coisas, tecnologia, evento universitário, UFC Crateús" />
+    <meta name="author" content="Organização FIT 2025" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="FIT 2025 — Internet das Coisas e suas aplicações" />
+    <meta property="og:description" content="O maior evento universitário de tecnologia do Sertão de Crateús." />
+    <meta property="og:image" content="assets/images/og-image.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fit2025.com.br" />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "FIT 2025",
+      "startDate": "2025-10-24",
+      "location": {
+        "@type": "Place",
+        "name": "UFC Crateús",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Crateús",
+          "addressRegion": "CE",
+          "addressCountry": "BR"
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-montserrat bg-gray-50">
+  <!-- Header -->
+<header class="fixed w-full bg-white/80 backdrop-blur-md shadow-md z-50 transition-all duration-300">
+  <div class="container mx-auto px-6 py-4">
+    <nav class="flex justify-between items-center">
+      <!-- Logo -->
+      <a href="#inicio" class="flex items-center gap-2">
+        <img src="assets/img/fit-icon.svg" alt="Logotipo do FIT 2025" 
+             class="h-10 object-contain" loading="lazy">
+        <span class="sr-only">FIT 2025</span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-10 text-sm font-semibold">
+        <li>
+          <a href="#inicio" 
+             class="relative text-gray-700 hover:text-[#00AFEF] transition-colors after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-[#00AFEF] hover:after:w-full after:transition-all after:duration-300">
+             Início
+          </a>
+        </li>
+        <li>
+          <a href="#programacao" 
+             class="relative text-gray-700 hover:text-[#00AFEF] transition-colors after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-[#00AFEF] hover:after:w-full after:transition-all after:duration-300">
+             Programação
+          </a>
+        </li>
+        <li>
+          <a href="#patrocinadores" 
+             class="relative text-gray-700 hover:text-[#00AFEF] transition-colors after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-[#00AFEF] hover:after:w-full after:transition-all after:duration-300">
+             Patrocinadores
+          </a>
+        </li>
+        <li>
+          <a href="#evento" 
+             class="relative text-gray-700 hover:text-[#00AFEF] transition-colors after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-[#00AFEF] hover:after:w-full after:transition-all after:duration-300">
+             O Evento
+          </a>
+        </li>
+        <li>
+          <a href="#organizadores" 
+             class="relative text-gray-700 hover:text-[#00AFEF] transition-colors after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-[#00AFEF] hover:after:w-full after:transition-all after:duration-300">
+             Organizadores
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" 
+              class="md:hidden text-gray-700 focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" 
+         class="hidden md:hidden mt-4 pb-4 border-t pt-4 bg-white/95 rounded-lg shadow-lg">
+      <ul class="flex flex-col space-y-3 text-sm font-semibold">
+        <li><a href="#inicio" class="block py-2 text-gray-700 hover:text-[#00AFEF] transition-colors">Início</a></li>
+        <li><a href="#programacao" class="block py-2 text-gray-700 hover:text-[#00AFEF] transition-colors">Programação</a></li>
+        <li><a href="#patrocinadores" class="block py-2 text-gray-700 hover:text-[#00AFEF] transition-colors">Patrocinadores</a></li>
+        <li><a href="#evento" class="block py-2 text-gray-700 hover:text-[#00AFEF] transition-colors">O Evento</a></li>
+        <li><a href="#organizadores" class="block py-2 text-gray-700 hover:text-[#00AFEF] transition-colors">Organizadores</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+
+<!-- Hero Section -->
+<section id="inicio" 
+  class="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
+
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="https://images.unsplash.com/photo-1727119313218-1e50eef4584b?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0" 
+         alt="Fundo tecnológico FIT 2025" 
+         class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-r from-[#00AFEF]/90 to-[#00AFEF]/70"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="container mx-auto px-4 relative z-10 text-center">
+    <!-- Title -->
+    <h1 class="text-6xl md:text-7xl font-extrabold tracking-tight mb-6 drop-shadow-2xl">
+      FIT 2025
+    </h1>
+    <h2 class="text-2xl md:text-4xl font-semibold mb-8 drop-shadow-lg text-white">
+      Internet das Coisas e suas Aplicações
+    </h2>
+
+    <!-- Description -->
+    <p class="text-lg md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto mb-12">
+      O maior evento universitário de tecnologia do Sertão de Crateús, unindo inovação, conhecimento e oportunidades em um só lugar.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-14">
+      <!-- Botão principal -->
+      <a href="#programacao" 
+         class="bg-[#00AFEF] hover:bg-[#0095cc] text-white px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-lg">
+        <i class="fas fa-calendar-alt mr-2"></i> Ver Programação
+      </a>
+      <!-- Botão secundário -->
+      <a href="https://fit2025.com.br/inscricao" target="_blank" 
+         class="border-2 border-white text-white hover:bg-[#0095cc] hover:text-white px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-lg">
+        <i class="fas fa-edit mr-2"></i> Inscreva-se
+      </a>
+    </div>
+
+    <!-- Countdown -->
+    <div class="bg-white/10 backdrop-blur-md rounded-xl p-8 max-w-2xl mx-auto shadow-2xl">
+      <h3 class="text-xl md:text-2xl font-semibold mb-6">
+        Contagem Regressiva para o Evento:
+      </h3>
+      <div class="grid grid-cols-4 gap-6 text-center">
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-white" id="days">00</div>
+          <div class="text-sm uppercase tracking-wide text-white/80">Dias</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-white" id="hours">00</div>
+          <div class="text-sm uppercase tracking-wide text-white/80">Horas</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-white" id="minutes">00</div>
+          <div class="text-sm uppercase tracking-wide text-white/80">Minutos</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-white" id="seconds">00</div>
+          <div class="text-sm uppercase tracking-wide text-white/80">Segundos</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Programação-->
+
+    <section id="programacao" class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">Programação</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Explore a agenda completa do FIT 2025, com palestras, workshops e atividades práticas sobre IoT e tecnologias emergentes.
+      </p>
+    </div>
+
+    <!-- Botões de dias -->
+    <div class="flex justify-center mb-8 space-x-4">
+      <button class="schedule-day px-6 py-2 rounded-lg font-medium bg-[#00AFEF] text-white transition-colors" data-day="day1">
+        Dia 1 (24/10)
+      </button>
+      <button class="schedule-day px-6 py-2 rounded-lg font-medium bg-gray-100 text-gray-700 hover:bg-[#00AFEF]/10 hover:text-[#00AFEF] transition-colors" data-day="day2">
+        Dia 2 (25/10)
+      </button>
+    </div>
+
+    <!-- Conteúdo -->
+    <div id="schedule-content">
+      <!-- Placeholder -->
+      <div class="text-center py-20">
+        <h3 class="text-2xl font-semibold text-gray-700 mb-4">Programação em breve</h3>
+        <p class="text-gray-500 max-w-xl mx-auto">
+          Em breve você poderá conferir aqui todos os detalhes da programação do FIT 2025.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- Galeria -->
+    <!-- <section id="galeria" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Galeria</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Reviva os melhores momentos das edições anteriores do FIT através de nossa galeria de fotos.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Palestra de abertura do FIT 2024" 
+                         class="w-full h-64 object-cover">
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Participantes em um workshop de robótica no FIT 2024" 
+                         class="w-full h-64 object-cover">
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Momento de networking entre participantes e palestrantes" 
+                         class="w-full h-64 object-cover">
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Foto em grupo no encerramento do FIT 2024" 
+                         class="w-full h-64 object-cover">
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <button class="bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                    Ver Mais Fotos
+                </button>
+            </div>
+        </div>
+    </section> -->
+
+<section id="patrocinadores" class="py-16 bg-gray-100">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12 fade-in">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Patrocinadores</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Agradecemos aos nossos patrocinadores que tornam o FIT 2025 possível, apoiando a inovação e o conhecimento.
+      </p>
+    </div>
+
+    <!-- Categoria Diamante -->
+    <div class="mb-12">
+      <h3 class="text-2xl font-bold text-[#00AFEF] text-center mb-6">Diamante</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center max-w-5xl mx-auto">
+        <a href="#" target="_blank" 
+           class="bg-white p-6 rounded-xl shadow-md w-full max-w-sm h-36 flex items-center justify-center 
+                  transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-[#00AFEF] border-2 border-transparent">
+          <img src="assets/img/sponsors/planeta-net.jpg" alt="Patrocinador Diamante" class="max-h-20 object-contain" loading="lazy">
+        </a>
+
+        <a href="#" target="_blank" 
+           class="bg-white p-6 rounded-xl shadow-md w-full max-w-sm h-36 flex items-center justify-center 
+                  transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-[#00AFEF] border-2 border-transparent">
+          <img src="assets/img/sponsors/sebrae.png" alt="Patrocinador Ouro" class="max-h-20 object-contain" loading="lazy">
+        </a>
+      </div>
+    </div>
+
+    <!-- Categoria Ouro -->
+    <!-- <div class="mb-12">
+      <h3 class="text-2xl font-bold text-[#FFA800] text-center mb-6">Ouro</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center max-w-5xl mx-auto">
+        <a href="#" target="_blank" 
+           class="bg-white p-6 rounded-xl shadow-md w-full max-w-sm h-36 flex items-center justify-center 
+                  transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-[#FFA800] border-2 border-transparent">
+          <img src="assets/img/sponsors/sebrae.png" alt="Patrocinador Ouro" class="max-h-20 object-contain" loading="lazy">
+        </a>
+      </div>
+    </div> -->
+
+    <!-- Categoria Prata -->
+    <div class="mb-12">
+      <h3 class="text-2xl font-bold text-[#A900FF] text-center mb-6">Prata</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center max-w-5xl mx-auto">
+        <a href="#" target="_blank" 
+           class="bg-white p-6 rounded-xl shadow-md w-full max-w-sm h-36 flex items-center justify-center 
+                  transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:border-[#A900FF] border-2 border-transparent">
+          <img src="assets/img/sponsors/seiva.png" alt="Patrocinador Prata" class="max-h-20 object-contain" loading="lazy">
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- Sobre o Evento -->
+    <section id="evento" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Sobre o FIT 2025</h2>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-6 items-stretch">
+                <!-- Coluna Esquerda: Texto e Edições -->
+                <div class="lg:w-2/3">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            O <b>Fórum de Inovação e Tecnologia (FIT)</b> do Campus da UFC em Crateús, maior evento universitário de tecnologia do Sertão de Crateús, traz uma programação de palestras, workshops e amostras tecnológicas que lançam um olhar em toda essa revolução.
+                        </p>
+
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            Em sua <b>12ª edição</b>, o FIT 2025 tem como tema "Internet das Coisas e suas Aplicações", explorando como a IoT está transformando diversos setores, desde a indústria até o cotidiano das pessoas. O evento visa promover a inovação, o conhecimento e o networking entre estudantes, profissionais e entusiastas de tecnologia.
+                        </p>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-6">Edições Anteriores</h3>
+                        <div class="space-y-4">
+
+                            <!-- Edição 2024 -->
+                            <a href="https://fit.crateus.ufc.br/ano/2024" target="_blank"
+                                class="block bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-4 shadow-sm hover:shadow-md hover:bg-green-200 transition-all flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3 text-lg"></i>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-900 mb-1">FIT 2024 - Segurança em redes em
+                                        um mundo conectado</h4>
+                                    <p
+                                        class="text-primary-600 hover:text-primary-700 hover:underline text-sm font-medium">
+                                        Acessar Site</p>
+                                </div>
+                            </a>
+
+                            <!-- Edição 2023 -->
+                            <a href="https://fit.crateus.ufc.br/ano/2023" target="_blank"
+                                class="block bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-4 shadow-sm hover:shadow-md hover:bg-green-200 transition-all flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3 text-lg"></i>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-900 mb-1">FIT 2023 - Otimização além das
+                                        Fronteiras</h4>
+                                    <p
+                                        class="text-primary-600 hover:text-primary-700 hover:underline text-sm font-medium">
+                                        Acessar Site</p>
+                                </div>
+                            </a>
+
+                            <!-- Edição 2022 -->
+                            <a href="#" target="_blank"
+                                class="block bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-4 shadow-sm hover:shadow-md hover:bg-green-200 transition-all flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3 text-lg"></i>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-900 mb-1">FIT 2022 - Era dos Dados</h4>
+                                    <p
+                                        class="text-primary-600 hover:text-primary-700 hover:underline text-sm font-medium">
+                                        Acessar Site</p>
+                                </div>
+                            </a>
+
+                            <!-- Edição 2021 -->
+                            <a href="https://fit.crateus.ufc.br/ano/2021" target="_blank"
+                                class="block bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-4 shadow-sm hover:shadow-md hover:bg-green-200 transition-all flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3 text-lg"></i>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-900 mb-1">FIT 2021 - Desafios de Empreender
+                                    </h4>
+                                    <p
+                                        class="text-primary-600 hover:text-primary-700 hover:underline text-sm font-medium">
+                                        Acessar Site</p>
+                                </div>
+                            </a>
+
+                            <!-- Edição 2020 -->
+                            <a href="https://fit.crateus.ufc.br/ano/2020" target="_blank"
+                                class="block bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-4 shadow-sm hover:shadow-md hover:bg-green-200 transition-all flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3 text-lg"></i>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-900 mb-1">FIT 2020 - CLOUD COMPUTING</h4>
+                                    <p
+                                        class="text-primary-600 hover:text-primary-700 hover:underline text-sm font-medium">
+                                        Acessar Site</p>
+                                </div>
+                            </a>
+
+                            <!-- Edição 2019 -->
+                            <a href="https://fit.crateus.ufc.br/ano/2019" target="_blank"
+                                class="block bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-4 shadow-sm hover:shadow-md hover:bg-green-200 transition-all flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3 text-lg"></i>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-900 mb-1">FIT 2019 - Educação e Negocios na
+                                        era da Inteligência Artificial</h4>
+                                    <p
+                                        class="text-primary-600 hover:text-primary-700 hover:underline text-sm font-medium">
+                                        Acessar Site</p>
+                                </div>
+                            </a>
+
+                            <!-- Edição 2018 -->
+                            <a href="https://fit.crateus.ufc.br/ano/2018" target="_blank"
+                                class="block bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-4 shadow-sm hover:shadow-md hover:bg-green-200 transition-all flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3 text-lg"></i>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-900 mb-1">FIT 2018 - Eu S2 Inovação</h4>
+                                    <p
+                                        class="text-primary-600 hover:text-primary-700 hover:underline text-sm font-medium">
+                                        Acessar Site</p>
+                                </div>
+                            </a>
+
+                            <!-- Edição 2017 -->
+                            <a href="https://fit.crateus.ufc.br/ano/2017" target="_blank"
+                                class="block bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-4 shadow-sm hover:shadow-md hover:bg-green-200 transition-all flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3 text-lg"></i>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-900 mb-1">FIT 2017 - 4ª edição do FIT</h4>
+                                    <p
+                                        class="text-primary-600 hover:text-primary-700 hover:underline text-sm font-medium">
+                                        Acessar Site</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna Direita: Logo do Evento 2025 -->
+                <div class="lg:w-1/3 flex items-stretch">
+                    <div class="bg-primary-600 rounded-lg p-4 shadow-lg flex items-center justify-center">
+                        <img src="assets/img/fit-banner.png" alt="Logotipo do FIT 2025"
+                            class="max-h-full object-contain" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizadores -->
+    <section id="organizadores" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Realização</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Conheça as equipes que tornam o FIT 2025 realidade, unindo expertise e paixão por tecnologia.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-items-center">
+                <!-- Card 1 -->
+                <div
+                    class="bg-[#0c4a6e] p-6 rounded-xl shadow-md w-full h-32 flex items-center justify-center transition-transform hover:scale-105">
+                    <img src="assets/img/organizers/logo-fit-oficial.svg" alt="Laboratório de IoT"
+                        class="max-h-16 object-contain" loading="lazy">
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-[#0c4a6e] p-6 rounded-xl shadow-md w-full h-32 flex items-center justify-center transition-transform hover:scale-105">
+                    <img src="assets/img/organizers/logo-ufc.png" alt="Laboratório de Hardware"
+                        class="max-h-20 object-contain" loading="lazy">
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-[#0c4a6e] p-6 rounded-xl shadow-md w-full h-32 flex items-center justify-center transition-transform hover:scale-105">
+                    <img src="assets/img/organizers/sebrae.svg" alt="Sebrae" class="max-h-16 object-contain"
+                        loading="lazy">
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="bg-[#0c4a6e] p-6 rounded-xl shadow-md w-full h-32 flex items-center justify-center transition-transform hover:scale-105">
+                    <img src="assets/img/organizers/gsipp.png" alt="Laboratório de Software"
+                        class="max-h-16 object-contain" loading="lazy">
+                </div>
+
+                <!-- Card 5 -->
+                <div
+                    class="bg-[#0c4a6e] p-6 rounded-xl shadow-md w-full h-32 flex items-center justify-center transition-transform hover:scale-105">
+                    <img src="assets/img/organizers/enginelab.png" alt="Laboratório de Cidades Inteligentes"
+                        class="max-h-20 object-contain" loading="lazy">
+                </div>
+
+                <!-- Card 6 -->
+                <div
+                    class="bg-[#0c4a6e] p-6 rounded-xl shadow-md w-full h-32 flex items-center justify-center transition-transform hover:scale-105">
+                    <img src="assets/img/organizers/sparc.png" alt="SPARC" class="max-h-16 object-contain"
+                        loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Sobre o FIT</h3>
+                    <p class="text-gray-300 mb-4">
+                        O Fórum de Inovação e Tecnologia (FIT) é o maior evento universitário de tecnologia do Sertão de
+                        Crateús, promovendo a inovação e o empreendedorismo.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/fitcrateus/"
+                            class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contato</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3"></i>
+                            Av. Professora Machadinha Lima, S/N, Crateús-CE
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-phone mr-3"></i>
+                            (88) 3691-9700
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            fit@crateus.ufc.br
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>© 2025 | Núcleo de Comunicação do FIT</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
