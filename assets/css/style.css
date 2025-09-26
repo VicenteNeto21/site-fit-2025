@@ -1,0 +1,51 @@
+/* Barra de rolagem personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+    /* largura da barra */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* fundo da trilha */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00AFEF;
+    /* azul padrão FIT */
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0095cc;
+    /* azul mais escuro no hover */
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #00AFEF #f1f1f1;
+}
+
+
+.schedule-day-container {
+    position: sticky;
+    top: 80px;
+    z-index: 10;
+    background-color: #fff;
+}
+
+.schedule-day:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.sponsor-logo,
+.organizer-logo {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sponsor-logo:hover,
+.organizer-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}

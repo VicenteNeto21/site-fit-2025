@@ -1,0 +1,71 @@
+<!-- Loja -->
+    <section id="loja" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Loja Oficial</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Adquira produtos exclusivos do FIT 2025 e leve uma lembrança do maior evento de tecnologia da
+                    região.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Produto 1 -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+                    <div class="h-64 bg-gray-200 flex items-center justify-center">
+                        <span class="text-gray-500">Imagem da Camisa FIT 2025</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Camisa FIT 2025</h3>
+                        <p class="text-gray-600 mb-4">Camisa preta com o logo do FIT 2025</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary-600">R$ 49,90</span>
+                            <button
+                                class="bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 2 -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+                    <div class="h-64 bg-gray-200 flex items-center justify-center">
+                        <span class="text-gray-500">Imagem da Caneca "A Era do IoT"</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Caneca "A Era do IoT"</h3>
+                        <p class="text-gray-600 mb-4">Caneca branca com tema de Internet das Coisas</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary-600">R$ 34,90</span>
+                            <button
+                                class="bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produto 3 -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105">
+                    <div class="h-64 bg-gray-200 flex items-center justify-center">
+                        <span class="text-gray-500">Imagem do Kit de Adesivos</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Kit de Adesivos</h3>
+                        <p class="text-gray-600 mb-4">Kit de adesivos com logos de tecnologia e do FIT</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary-600">R$ 19,90</span>
+                            <button
+                                class="bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                                Comprar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

@@ -1,0 +1,106 @@
+{
+  "responses": [
+    {
+      "keywords": ["início", "start", "menu", "ajuda", "voltar", "inicio", "começar", "começar", "home", "principal"],
+      "response": "Prontinho para explorar o FIT 2025, aventureiro? 🦊 Sou a Grafox, sua guia! Escolha uma trilha abaixo!",
+      "options": [
+        { "text": "Fazer inscrição", "next": "inscricao" },
+        { "text": "O que tá rolando?", "next": "agora" },
+        { "text": "Credenciamento", "next": "credenciamento" },
+        { "text": "Itens da lojinha", "next": "lojinha" },
+        { "text": "Ver agenda", "next": "programacao" }
+      ]
+    },
+    {
+      "keywords": ["inscricao", "inscrever", "inscrever-se", "cadastro", "participar", "inscrição", "cadastrar", "registro", "matricular", "join"],
+      "response": "Bora se juntar à aventura? 🦊 Acesse https://fit2025.com.br/inscricao e preencha o formulário. É grátis e rapidinho!",
+      "options": [
+        { "text": "Voltar ao menu", "next": "start" }
+      ]
+    },
+    {
+      "keywords": ["agora", "acontecendo", "em andamento", "atividades", "ao vivo", "o que tá rolando", "atual", "no momento", "current", "happening"],
+      "response": "Agora tá rolando a palestra 'Inovações Tecnológicas' no auditório e a oficina 'Desenvolvimento Web' na sala 3! 🦊 Quer a agenda completa?",
+      "options": [
+        { "text": "Ver agenda completa", "next": "programacao" },
+        { "text": "Voltar ao menu", "next": "start" }
+      ]
+    },
+    {
+      "keywords": ["credenciamento", "entrada", "registro", "check-in", "credenciar", "chegada", "acesso", "badge", "credencial"],
+      "response": "O credenciamento é na entrada principal, no balcão de recepção. 🦊 Leve seu documento com foto e o comprovante de inscrição!",
+      "options": [
+        { "text": "Voltar ao menu", "next": "start" }
+      ]
+    },
+    {
+      "keywords": ["lojinha", "itens", "retirada", "souvenir", "brindes", "produto", "compras", "loja", "shop", "merch"],
+      "response": "Pegue seus itens no estande da lojinha, em frente ao auditório, das 9h às 18h. 🦊 Traga documento e comprovante de compra!",
+      "options": [
+        { "text": "Voltar ao menu", "next": "start" }
+      ]
+    },
+    {
+      "keywords": ["programacao", "programação", "agenda", "horários", "atividades", "horario", "cronograma", "eventos", "schedule", "timetable"],
+      "response": "A agenda do FIT 2025 tá cheia de inovação! 🦊 Dias 21 e 22 de setembro, com palestras, oficinas e hackathon. Veja mais no site!",
+      "options": [
+        { "text": "O que tá rolando agora?", "next": "agora" },
+        { "text": "Voltar ao menu", "next": "start" }
+      ]
+    },
+    {
+      "keywords": ["onde", "local", "endereco", "endereço", "localização", "lugar", "localizar", "venue", "location", "place"],
+      "response": "O FIT 2025 rola no Campus da UFC Crateús, Av. da Universidade, Campus do Pici, Crateús/CE. 🦊 Quer saber como chegar?",
+      "options": [
+        { "text": "Como chegar", "next": "https://maps.google.com" },
+        { "text": "Voltar ao menu", "next": "start" }
+      ]
+    },
+    {
+      "keywords": ["organizadores", "quem organiza", "responsáveis", "equipe", "organizador", "quem faz", "organizers", "team"],
+      "response": "O FIT é feito pelos labs da UFC Crateús: LabIoT, LabHardware, LabSoftware e LabSmartCities. 🦊 Veja mais em 'Organizadores'!",
+      "options": [
+        { "text": "Voltar ao menu", "next": "start" }
+      ]
+    },
+    {
+      "keywords": ["galeria", "fotos", "imagens", "memórias", "fotos do evento", "galery", "gallery", "pictures"],
+      "response": "Quer relembrar o FIT? 🦊 A seção 'Galeria' no site tem as melhores fotos das edições passadas!",
+      "options": [
+        { "text": "Voltar ao menu", "next": "start" }
+      ]
+    },
+    {
+      "keywords": ["patrocinadores", "apoio", "patrocínio", "empresas", "patrocinador", "parceiros", "sponsors", "supporters"],
+      "response": "Nossos patrocinadores fazem o FIT brilhar! 🦊 TechSolutions, InovaIoT, UFC e mais. Confira em 'Patrocinadores'!",
+      "options": [
+        { "text": "Voltar ao menu", "next": "start" }
+      ]
+    },
+    {
+      "keywords": ["fit", "evento", "sobre", "informações", "o que é", "informacao", "detalhes", "about", "event", "info"],
+      "response": "O FIT 2025 é o maior evento tech do Sertão de Crateús! 🦊 Tema 'A Era do IoT', conectando ideias e inovação. Veja em 'Conheça o Evento'!",
+      "options": [
+        { "text": "Ver agenda", "next": "programacao" },
+        { "text": "Voltar ao menu", "next": "start" }
+      ]
+    },
+    {
+      "keywords": ["oi", "olá", "ola", "e aí", "eai", "bom dia", "boa tarde", "boa noite", "hey", "hi", "hello"],
+      "response": "Oi, aventureiro(a)! 🦊 Sou a Grafox, sua guia no FIT 2025. Como posso te ajudar hoje?",
+      "options": [
+        { "text": "Ver opções", "next": "start" }
+      ]
+    },
+    {
+      "keywords": [],
+      "response": "Ops, me perdi na floresta! 🦊 Tente algo como 'inscrição', 'agenda', ou escolha uma opção abaixo!",
+      "options": [
+        { "text": "Fazer inscrição", "next": "inscricao" },
+        { "text": "Ver agenda", "next": "programacao" },
+        { "text": "Conheça o evento", "next": "fit" },
+        { "text": "Voltar ao menu", "next": "start" }
+      ]
+    }
+  ]
+}

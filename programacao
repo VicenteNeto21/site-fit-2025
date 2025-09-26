@@ -1,0 +1,113 @@
+    <section id="programacao" class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">Programação</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Explore a agenda completa do FIT 2025, com palestras, workshops e atividades práticas sobre IoT e tecnologias emergentes.
+      </p>
+    </div>
+
+    <!-- Botões de dias -->
+    <div class="flex justify-center mb-8 space-x-4">
+      <button class="schedule-day px-6 py-2 rounded-lg font-medium bg-[#00AFEF] text-white transition-colors" data-day="day1">
+        Dia 1 (24/10)
+      </button>
+      <button class="schedule-day px-6 py-2 rounded-lg font-medium bg-gray-100 text-gray-700 hover:bg-[#00AFEF]/10 hover:text-[#00AFEF] transition-colors" data-day="day2">
+        Dia 2 (25/10)
+      </button>
+    </div>
+
+    <!-- Conteúdo -->
+    <div id="schedule-content">
+      <!-- Dia 1 -->
+      <div id="day1" class="schedule-day-content">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-2xl shadow-md p-4 mb-6 flex flex-col md:flex-row gap-4 hover:shadow-lg transition-all duration-300">
+          <div class="w-full md:w-32 h-32 flex-shrink-0 overflow-hidden rounded-xl border-2 border-[#00AFEF]/30">
+            <img src="https://source.unsplash.com/200x200/?conference" alt="Cerimônia de Abertura" class="w-full h-full object-cover">
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Cerimônia de Abertura</h3>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="inline-flex items-center gap-2 bg-[#00AFEF]/20 text-[#00AFEF] text-xs font-semibold px-3 py-1 rounded-full">
+                <i class="fas fa-clock text-sm"></i> 08:00 - 09:30
+              </span>
+              <span class="inline-flex items-center gap-2 bg-[#FFA800]/20 text-[#FFA800] text-xs font-semibold px-3 py-1 rounded-full">
+                <i class="fas fa-map-marker-alt text-sm"></i> Auditório Principal
+              </span>
+            </div>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              Abertura oficial do FIT 2025 com autoridades e apresentação do tema <strong>“A Era do IoT”</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-2xl shadow-md p-4 mb-6 flex flex-col md:flex-row gap-4 hover:shadow-lg transition-all duration-300">
+          <div class="w-full md:w-32 h-32 flex-shrink-0 overflow-hidden rounded-xl border-2 border-[#00AFEF]/30">
+            <img src="https://source.unsplash.com/200x200/?industry" alt="IoT na Indústria 4.0" class="w-full h-full object-cover">
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-gray-900 mb-1">IoT na Indústria 4.0</h3>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="inline-flex items-center gap-2 bg-[#00AFEF]/20 text-[#00AFEF] text-xs font-semibold px-3 py-1 rounded-full">
+                <i class="fas fa-clock text-sm"></i> 10:00 - 12:00
+              </span>
+              <span class="inline-flex items-center gap-2 bg-[#FFA800]/20 text-[#FFA800] text-xs font-semibold px-3 py-1 rounded-full">
+                <i class="fas fa-map-marker-alt text-sm"></i> Sala 101
+              </span>
+            </div>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              Como a Internet das Coisas está revolucionando os processos industriais.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dia 2 -->
+      <div id="day2" class="schedule-day-content hidden">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-2xl shadow-md p-4 mb-6 flex flex-col md:flex-row gap-4 hover:shadow-lg transition-all duration-300">
+          <div class="w-full md:w-32 h-32 flex-shrink-0 overflow-hidden rounded-xl border-2 border-[#00AFEF]/30">
+            <img src="https://source.unsplash.com/200x200/?hackathon" alt="Hackathon de IoT" class="w-full h-full object-cover">
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Hackathon de IoT</h3>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="inline-flex items-center gap-2 bg-[#00AFEF]/20 text-[#00AFEF] text-xs font-semibold px-3 py-1 rounded-full">
+                <i class="fas fa-clock text-sm"></i> 09:00 - 18:00
+              </span>
+              <span class="inline-flex items-center gap-2 bg-[#FFA800]/20 text-[#FFA800] text-xs font-semibold px-3 py-1 rounded-full">
+                <i class="fas fa-map-marker-alt text-sm"></i> Laboratório Principal
+              </span>
+            </div>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              Desenvolva soluções inovadoras de IoT em equipes, com mentoria especializada.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-2xl shadow-md p-4 mb-6 flex flex-col md:flex-row gap-4 hover:shadow-lg transition-all duration-300">
+          <div class="w-full md:w-32 h-32 flex-shrink-0 overflow-hidden rounded-xl border-2 border-[#00AFEF]/30">
+            <img src="https://source.unsplash.com/200x200/?smartcity" alt="Cidades Inteligentes" class="w-full h-full object-cover">
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-gray-900 mb-1">Palestra: Cidades Inteligentes</h3>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="inline-flex items-center gap-2 bg-[#00AFEF]/20 text-[#00AFEF] text-xs font-semibold px-3 py-1 rounded-full">
+                <i class="fas fa-clock text-sm"></i> 10:00 - 12:00
+              </span>
+              <span class="inline-flex items-center gap-2 bg-[#FFA800]/20 text-[#FFA800] text-xs font-semibold px-3 py-1 rounded-full">
+                <i class="fas fa-map-marker-alt text-sm"></i> Auditório Principal
+              </span>
+            </div>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              Exploração de como o IoT está transformando cidades em ambientes mais sustentáveis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIT 2025 - A Era do IoT</title>
+    <link rel="icon" href="assets/img/" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="FIT 2025 - A Era do IoT: Maior evento de tecnologia no Sertão de Crateús. Palestras, workshops e hackathon sobre IoT.">
+    <meta property="og:title" content="FIT 2025 - A Era do IoT">
+    <meta property="og:description" content="Conectando inovação e oportunidades no Sertão.">
+    <meta property="og:image" content="assets/images/og-image.jpg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "FIT 2025",
+      "startDate": "2025-10-24",
+      "location": { "@type": "Place", "name": "UFC Crateús" }
+    }
+    </script>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#inicio" class="logo">
+                    <img src="assets/images/logo-fit.png" alt="Logo do FIT 2025">
+                </a>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#inicio" class="nav-item">Início</a></li>
+                    <li><a href="#programacao" class="nav-item">Programação</a></li>
+                    <li><a href="#galeria" class="nav-item">Galeria</a></li>
+                    <li><a href="#loja" class="nav-item">Loja</a></li>
+                    <li><a href="#patrocinadores" class="nav-item">Patrocinadores</a></li>
+                    <li><a href="#evento" class="nav-item">Conheça o Evento</a></li>
+                    <li><a href="#organizadores" class="nav-item">Organizadores</a></li>
+                </ul>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>FIT 2025</h1>
+                <h2>A Era do IoT</h2>
+                <p>O maior evento universitário de tecnologia do Sertão de Crateús, conectando inovação, conhecimento e oportunidades.</p>
+                <div class="hero-buttons">
+                    <a href="#programacao" class="btn btn-primary">Programação</a>
+                    <a href="https://fit2025.com.br/inscricao" class="btn btn-secondary" target="_blank" rel="noopener">Inscreva-se</a>
+                </div>
+                <div class="countdown" aria-live="polite">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="days">00</div>
+                        <div class="countdown-text">Dias</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="hours">00</div>
+                        <div class="countdown-text">Horas</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="minutes">00</div>
+                        <div class="countdown-text">Minutos</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-text">Segundos</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="programacao" class="schedule fade-in">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Programação</h2>
+                    <p>Explore a agenda completa do FIT 2025, com palestras, workshops e atividades práticas sobre IoT e tecnologias emergentes.</p>
+                </div>
+                <div class="schedule-tabs" id="scheduleTabs" role="tablist"></div>
+                <div class="schedule-content" id="scheduleContent"></div>
+            </div>
+        </section>
+
+        <section id="galeria" class="gallery fade-in">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Galeria</h2>
+                    <p>Reviva os melhores momentos das edições anteriores do FIT através de nossa galeria de fotos.</p>
+                </div>
+                <div class="gallery-grid">
+                    <img src="assets/images/fit2024-palestra.webp" alt="Palestra de abertura do FIT 2024" loading="lazy">
+                    <img src="assets/images/fit2024-workshop.webp" alt="Participantes em um workshop de robótica no FIT 2024" loading="lazy">
+                    <img src="assets/images/fit2024-networking.webp" alt="Momento de networking entre participantes e palestrantes" loading="lazy">
+                    <img src="assets/images/fit2024-encerramento.webp" alt="Foto em grupo no encerramento do FIT 2024" loading="lazy">
+                </div>
+            </div>
+        </section>
+        
+        <section id="loja" class="store fade-in">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Loja Oficial</h2>
+                    <p>Adquira produtos exclusivos do FIT 2025 e leve uma lembrança do maior evento de tecnologia da região.</p>
+                </div>
+                <div class="store-grid">
+                    <div class="product-card">
+                        <img src="assets/images/camisa-fit2025.webp" alt="Camisa preta com o logo do FIT 2025" loading="lazy">
+                        <h3>Camisa FIT 2025</h3>
+                        <p class="price">R$ 49,90</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="assets/images/caneca-iot.webp" alt="Caneca branca com tema de Internet das Coisas" loading="lazy">
+                        <h3>Caneca "A Era do IoT"</h3>
+                        <p class="price">R$ 34,90</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                    <div class="product-card">
+                        <img src="assets/images/kit-adesivos.webp" alt="Kit de adesivos com logos de tecnologia e do FIT" loading="lazy">
+                        <h3>Kit de Adesivos</h3>
+                        <p class="price">R$ 19,90</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="patrocinadores" class="sponsors fade-in">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Patrocinadores</h2>
+                    <p>Agradecemos aos nossos patrocinadores que tornam o FIT 2025 possível, apoiando a inovação e o conhecimento.</p>
+                </div>
+                <div class="sponsors-grid">
+                    <a href="https://www.alura.com.br" target="_blank" class="sponsor-card" rel="noopener">
+                        <img src="assets/images/alura-logo.webp" alt="Logo da Alura" loading="lazy">
+                    </a>
+                    <a href="https://www.google.com" target="_blank" class="sponsor-card" rel="noopener">
+                        <img src="assets/images/google-logo.webp" alt="Logo da Google" loading="lazy">
+                    </a>
+                    <a href="#" class="sponsor-card">
+                        <img src="assets/images/galeto-mania-logo.webp" alt="Logo da Galeto Mania" loading="lazy">
+                    </a>
+                    <a href="#" class="sponsor-card">
+                        <img src="assets/images/solar-engenharia-logo.webp" alt="Logo da Solar Engenharia" loading="lazy">
+                    </a>
+                    <a href="#" class="sponsor-card">
+                        <img src="assets/images/tina-mix-logo.webp" alt="Logo da Tina Mix" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="evento" class="about-event fade-in">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Conheça o Evento</h2>
+                    <p>O Fórum de Inovação e Tecnologia (FIT) do Campus da UFC em Crateús é o maior evento universitário de tecnologia do Sertão de Crateús, conectando estudantes, profissionais e entusiastas em torno da inovação.</p>
+                </div>
+                <p>O FIT 2025 traz como tema a Internet das Coisas (IoT), explorando suas aplicações em indústrias, cidades inteligentes e mais. Participe de palestras, workshops e um hackathon para aprender e inovar.</p>
+                <div class="event-history">
+                    <h3>Edições Anteriores</h3>
+                    <ul class="event-list">
+                        <li class="event-item">
+                            <div class="event-info">
+                                <span>FIT 2023 - Otimização além das Fronteiras</span>
+                                <a href="https://fit2023.crateus.ufc.br" target="_blank" rel="noopener">Acessar Site</a>
+                            </div>
+                            <img src="assets/images/fit2023-logo.webp" alt="Logo do FIT 2023" loading="lazy">
+                        </li>
+                        <li class="event-item">
+                            <div class="event-info">
+                                <span>FIT 2022 - Era dos Dados</span>
+                                <a href="https://fit2022.crateus.ufc.br" target="_blank" rel="noopener">Acessar Site</a>
+                            </div>
+                            <img src="assets/images/fit2022-logo.webp" alt="Logo do FIT 2022" loading="lazy">
+                        </li>
+                        <li class="event-item">
+                            <div class="event-info">
+                                <span>FIT 2021 - Desafios de Empreender</span>
+                                <a href="https://fit2021.crateus.ufc.br" target="_blank" rel="noopener">Acessar Site</a>
+                            </div>
+                            <img src="assets/images/fit2021-logo.webp" alt="Logo do FIT 2021" loading="lazy">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="organizadores" class="organizers fade-in">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Organizadores</h2>
+                    <p>Conheça as equipes que tornam o FIT 2025 realidade, unindo expertise e paixão por tecnologia.</p>
+                </div>
+                <div class="organizers-grid">
+                    <img src="assets/images/labiot-logo.webp" alt="Logo do Laboratório de IoT" loading="lazy">
+                    <img src="assets/images/labhardware-logo.webp" alt="Logo do Laboratório de Hardware" loading="lazy">
+                    <img src="assets/images/labsoftware-logo.webp" alt="Logo do Laboratório de Software" loading="lazy">
+                    <img src="assets/images/labsmartcities-logo.webp" alt="Logo do Laboratório de Cidades Inteligentes" loading="lazy">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Sobre o FIT</h3>
+                    <p>O Fórum de Inovação e Tecnologia (FIT) é o maior evento universitário de tecnologia do Sertão de Crateús, promovendo a inovação e o empreendedorismo.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook do FIT"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram do FIT"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Professora Machadinha Lima, S/N, Crateús-CE</p>
+                    <p><i class="fas fa-phone"></i> (88) 3691-9700</p>
+                    <p><i class="fas fa-envelope"></i> fit@crateus.ufc.br</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 - Equipe de desenvolvimento do FIT. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
